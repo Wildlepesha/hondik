@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <div class="content form">
+        {% if submitted %}
+        <h1>Добавлено</h1>
+        {% else %}
+        <form action="" method="post">
+            {% csrf_token %}
+            {% for i in form %}
+                {{ i.label }}
+                <div class="item form-item">{{ i }}</div>
+            {% endfor %}
+            <button type="submit">Добавить</button>
+        </form>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    {% if category_posts %}
+    <div class="content hr"><h2>Категория: {{ cats }}</h2></div>
+    <div class="content shop">
+            {% for result in category_posts %}
+                <div class="item">
+                    <a href="{% url 'detail' result.slug %}">{{ result.title }}</a>
+                    <img src="{{ result.img.url }}" alt="">
+                </div>
+            {% endfor %}
+        {% else %}
+        <div class="content hr"><h2>Такой категории не существует</h2></div>
+        {% endif %}
+    </div>
+{% endblock %}

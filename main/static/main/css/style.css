@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Open+Sans+Condensed:wght@300;700&display=swap');
+
+@media screen and (max-width: 450px) {
+  header .icons div .fa-align-justify {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  header .icons div .fa-align-justify {display: none;}
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+body {background: #E5E5E5; overflow: scroll;}
+
+
+/* HEAD STYLES */
+
+header {
+  display: flex;
+  padding: 10px 5%;
+  width: 90%;
+  height: 85px;
+  -ms-align-items: center;
+  align-items: center;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header .links {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.links > a,
+.aside-links > a,
+.links > p,
+.aside-links > p {
+  text-decoration: none;
+  color: black;
+}
+
+.links > a:hover,
+.aside-links > a:hover,
+.links > p:hover,
+.aside-links > p:hover {
+  text-decoration: underline;
+  text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.6);
+  cursor: pointer;
+}
+
+.links > a:focus {
+  text-decoration: underline;
+  text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.6);
+}
+
+header .logo {
+  font-size: 30px;
+  position: relative;
+  left: -120px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.6);
+}
+
+.icons div i:first-child {margin-right: 18px;}
+
+.icons .icn1:hover {cursor: pointer;}
+
+#head-search {
+  position: fixed;
+  right: -10000px;
+  width: 100%;
+  height: 100%;
+  background: #4f4f4f;
+  font-size: 20px;
+  z-index: 333333;
+  text-align: center;
+  transition: all 600ms ease;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+#head-search i {
+  position: relative;
+  padding-top: 20px;
+  left: -30px;
+}
+#head-search .aside-links {
+  width: 100%;
+  padding-top: 50px;
+}
+
+#head-search .aside-links a,
+#head-search .aside-links p {
+  margin: 15px;
+}
+
+#head-search .aside-links .socials {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+#head-search .aside-links .socials a {
+  border: 1px solid #BDA37B;
+  border-radius: 10px;
+  width: 50%;
+  margin: 15px;
+}
+
+
+#head-search .aside-links a, #head-search .aside-links p {color: #E5E5E5;}
+
+#head-search form {
+  margin-top: 50px;
+}
+
+#head-search i,
+#search-panel i {
+  color: #BDA37B;
+}
+
+#head-search i:hover,
+ #search-panel i:hover {
+  cursor: pointer;
+  color: black;
+}
+
+#search-panel {
+    position: fixed;
+    top: -1000px;
+    height: 85px;
+    background: #fff;
+    width: 90%;
+    z-index: 99999;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: center;
+    transition: all 200ms ease;
+}
+
+#search-panel form {
+    width: 90%;
+    height: 85px;
+    margin-top: 20px;
+}
+
+#search-panel form input {
+    width: 80%;
+    height: 40px;
+    border: 1px solid #BDA37B;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+#search-panel form button {
+    width: 15%;
+    height: 40px;
+    border: 1px solid #BDA37B;
+    font-size: 18px;
+}
+
+.aside-links {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* CONTENT STYLES */
+
+.main-img {
+  margin: 0 5%;
+  width: 90%;
+  height: 900px;
+  border-bottom: 5px solid  #BDA37B;
+  z-index: -99;
+}
+
+.main-img img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -20px;
+  z-index: -99;
+  object-fit: cover;
+
+}
+
+.added-img {
+  height: 30%;
+  width: 20%;
+  max-width: 350px;
+  max-height: 350px;
+}
+
+.added-img > img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border: 10px solid #FFFFFF;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 100px rgba(0, 0, 0, 0.25));
+}
+
+.added-img.first {
+  position: absolute;
+  top: 750px;
+  left: 150px;
+  z-index: 1;
+}
+
+.added-img.second {
+  position: absolute;
+  top: 750px;
+  left: 220px;
+  z-index: 2
+}
+
+.added-img.second img {transform: rotate(7.05deg);}
+
+.text {
+  background: rgba(189, 163, 123, 0.8);
+  width: 450px;
+  height: 50px;
+  position: absolute;
+  top: 1050px;
+  left: 220px;
+  text-align: center;
+  z-index: 5;
+}
+
+.text p {
+  font-family: 'Marck Script', cursive;
+  font-size: 50px;
+  letter-spacing: 0.1em;
+  position: relative;
+  top: -20px;
+}
+
+.content-logo {
+  margin-top: 200px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 37px;
+  line-height: 118.2%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: #BDA37B;
+}
+
+.content {
+  text-align: center;
+  margin: 100px 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.content > .item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #BDA37B;
+  box-sizing: border-box;
+
+}
+
+.content > .item  a,
+ .content.pagination a,
+ .content.detail .disc h2,
+ .content.detail .disc a,
+ .content.detail .detail-image form button {
+  background: #fff;
+  height: 30px;
+  padding-top: 15px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: black;
+}
+
+.item > a:hover,
+ .content.pagination a:hover,
+ .content.detail .disc a:hover,
+ .content.detail .detail-image form button:hover {
+  text-decoration: underline;
+  text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.6);
+}
+
+.item > a:focus {
+  text-decoration: underline;
+  text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.6);
+}
+
+.content > .item img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.btn-shop {
+  display: flex;
+  justify-content: center;
+}
+.btn-shop div {
+  width: 241px;
+  height: 40px;
+  text-align: center;
+  background: #BDA37B;
+  padding-top: 15px;
+}
+
+.btn-shop div a {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+footer .news {
+  display: flex;
+  justify-content: space-between;
+  background: #BDA37B;
+}
+
+footer .news form input {
+  width: 500px;
+  margin: 50px 20px 0 0;
+  height: 50px;
+}
+
+footer .socials {
+  height: 50px;
+  background: black;
+}
+
+.content.shop {
+    justify-content: center;
+}
+
+.content.shop > .item {margin: 10px 2%;}
+.content.pagination a {
+    border: 2px solid silver;
+    padding: 10px;
+    margin: 10px;
+}
+.content.hr {border-bottom: 2px solid black;}
+
+.content.detail .disc {width: 60%;}
+.content.detail .disc h2, .content.detail .disc a {background: none;}
+.content.detail .disc h2 {font-size: 37px; text-decoration: none; border: 1px solid black; padding: 15px;}
+.content.detail .disc a,
+.content.detail .detail-image p {
+  font-size: 20px;
+  text-transform: lowercase;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.cat-title {margin: 0 0 10px 0;}
+
+.content.detail .disc .cat-title {
+  font-size: 22px;
+}
+
+.content.detail .disc p {
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  line-height: 30px;
+}
+
+.content.detail .detail-image img {
+  margin: 0 0 30px 0;
+}
+
+.content.detail .detail-image p {
+  text-transform: none;
+  text-decoration: none;
+  border: 1px solid black;
+}
+.content.detail .detail-image form button {
+  line-height: normal;
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  height: 50px;
+  text-decoration: none;
+}
+.content.detail .detail-image form button:hover {cursor: pointer;}
+.content.form {justify-content: center}
+form,
+ .form-item input,
+ .form-item textarea {width: 100%; resize: none;}
+
+.form-item input,
+.form-item textarea {
+    padding: 20px;
+    font-size: 16px;
+}
+form {font-size: 20px;}
+
+.form button {width: 30%; height: 60px;}

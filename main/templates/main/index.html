@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %}
+{% block content %}
+{% load static %}
+    <section class="main-img">
+      <img src="{% static 'main/img/main-img2.jpg' %}" alt="">
+    </section>
+
+    <section class="added-img first">
+      <img src="{% static 'main/img/sticker1.jpg' %}" alt="">
+    </section>
+
+    <section class="added-img second">
+      <img src="{% static 'main/img/sticker3.jpg' %}" alt="">
+    </section>
+
+    <section class="text">
+      <p>Hondik Website</p>
+    </section>
+
+    <section class="content-logo">
+      <p>Ассортимент</p>
+    </section>
+    <section class="content">
+      <div class="item"><a href="{% url 'shop' %}">Стикеры</a><img src="{% static 'main/img/sticker3.jpg' %}" alt=""></div>
+      <div class="item"><a href="{% url 'shop' %}">Стикеры</a><img src="{% static 'main/img/sticker3.jpg' %}" alt=""></div>
+      <div class="item"><a href="{% url 'shop' %}">Стикеры</a><img src="{% static 'main/img/sticker3.jpg' %}" alt=""></div>
+    </section>
+    <div class="btn-shop">
+      <div>
+      <a href="#">Магазин</a>
+      </div>
+    </div>
+{% endblock %}

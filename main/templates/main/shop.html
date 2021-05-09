@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block logo %} Hondik shop {% endblock %}
+
+{% block content %}
+<div class="content shop">
+    {% for i in post %}
+        <div class="item">
+            <a href="{% url 'detail' i.slug %}">{{ i.title }}</a>
+            <img src="{{ i.img.url }}" alt="">
+        </div>
+    {% endfor %}
+</div>
+<div class="content pagination shop">
+{% if is_paginated %}
+		{% for num in page_obj.paginator.page_range %}
+			<a class="nums" href="?page={{ num }}">{{ num }}</a>
+		{% endfor %}
+		{% endif %}
+    </div>
+
+{% endblock %}

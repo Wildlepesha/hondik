@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+
+{% block links %}
+<a href="#">Shopping cart</a>
+{% endblock %}
+
+{% block content %}
+	<div class="back"><i class="fas fa-arrow-left"></i><a href="{% url 'shop' %}">Назад</a></div>
+	<section class="content detail">
+		<div class='detail-image'>
+			<img src="{{ item.img.url }}" alt="">
+			<p>Цена: {{ item.price }} RUB</p><br>
+			<form action="">
+				{% csrf_token %}
+				<button class="button" type="submit">Купить</button>
+			</form>
+		</div>
+		<div class="disc">
+			<h2>{{ item.title }}</h2><br>
+			<p class='cat-title'>Категория - <a href="{% url 'category' item.cat %}">{{ item.cat }}</a></p>
+			<p>{{ item.desc }}</p><br>
+			<p>Ключевые слова:</p>
+			{{ item.keywords }}
+		</div>
+	</section>
+{% endblock %}
